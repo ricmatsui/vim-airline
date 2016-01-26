@@ -11,7 +11,7 @@ function! airline#themes#jellybeans#refresh()
   " compatible color array is generated.
   let s:N1 = airline#themes#get_highlight('DbgCurrent', 'bold')
   let s:N2 = airline#themes#get_highlight('Folded')
-  let s:N3 = airline#themes#get_highlight('NonText')
+  let s:N3 = [ '#000000', '#dddddd', 'White', 'Black' ]
 
   let g:airline#themes#jellybeans#palette.accents = {
         \ 'red': airline#themes#get_highlight('Constant'),
@@ -43,7 +43,7 @@ function! airline#themes#jellybeans#refresh()
   let g:airline#themes#jellybeans#palette.visual_modified = g:airline#themes#jellybeans#palette.normal_modified
 
   " And of course, you can always do it manually as well.
-  let s:IA = [ '#444444', '#1c1c1c', 237, 234 ]
+  let s:IA = airline#themes#get_highlight('Normal')
   let g:airline#themes#jellybeans#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
   let g:airline#themes#jellybeans#palette.inactive_modified = g:airline#themes#jellybeans#palette.normal_modified
 endfunction
