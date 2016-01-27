@@ -19,7 +19,7 @@ function! airline#themes#jellybeans#refresh()
 
   let g:airline#themes#jellybeans#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
   let g:airline#themes#jellybeans#palette.normal_modified = {
-        \ 'airline_c': [ '#ffb964', '', 215, '', '' ]
+        \ 'airline_c': [ '#000000', '', 215, '', '' ]
         \ }
 
   let s:I1 = airline#themes#get_highlight('DiffAdd', 'bold')
@@ -43,7 +43,7 @@ function! airline#themes#jellybeans#refresh()
   let g:airline#themes#jellybeans#palette.visual_modified = g:airline#themes#jellybeans#palette.normal_modified
 
   " And of course, you can always do it manually as well.
-  let s:IA = airline#themes#get_highlight('Normal')
+  let s:IA = [ '#e8e8d3', '#403C41', 'White', 'Black' ]
   let g:airline#themes#jellybeans#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
   let g:airline#themes#jellybeans#palette.inactive_modified = g:airline#themes#jellybeans#palette.normal_modified
 endfunction
